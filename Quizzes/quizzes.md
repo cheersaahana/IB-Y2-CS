@@ -12,7 +12,7 @@ public class RanNum {
 ```
 
 Screenshot Proof:
-![alt text](<Screenshot 2026-08-19 at 9.24.39 PM.png>)
+![alt text](Screenshots/Q1.png)
 
 
 Quiz 2 - 18/08/2026
@@ -37,4 +37,4 @@ public class IPv4 {
 ```
 
 Screenshot Proof:
-![alt text](<Screenshot 2026-08-19 at 9.27.40 PM.png>)
+![alt text](Screenshots/Q2.png)
