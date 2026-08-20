@@ -1,3 +1,5 @@
+Quizzes Doc ->
+
 Quiz 1 - 13/08/2026
 
 Prompt: Create a class that generates a random number between 0 and 256, returns a string.
@@ -38,3 +40,8 @@ public class IPv4 {
 
 Screenshot Proof:
 ![alt text](Screenshots/Q2.png)
+
+
+Quiz 3 - 20/08/2026
+
+Prompt: TBC
