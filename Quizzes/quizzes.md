@@ -69,5 +69,5 @@ public class Checker {
         }
     }
 ```
-Screenshot Proof:
+Screenshot Proof:  
 ![alt text](Screenshots/Q3.png)
