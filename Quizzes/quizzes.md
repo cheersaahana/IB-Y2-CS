@@ -71,3 +71,4 @@ public class Checker {
 ```
 
 Screenshot Proof:
+![alt text](Screenshots/Q3.png)
