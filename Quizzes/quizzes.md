@@ -1,10 +1,11 @@
 # Quizzes for IB Y2
 
-Quiz 1 - 13/08/2026
+## Quiz 1 - 13/08/2026
 
-Prompt: Create a class that generates a random number between 0 and 256, returns a string.
+### Prompt: 
+Create a class that generates a random number between 0 and 256, returns a string.
 
-Code Solution: 
+### Code Solution: 
 ```.java
 public class RanNum {
     public String getNumber() {
@@ -13,15 +14,16 @@ public class RanNum {
     }
 ```
 
-Screenshot Proof:
+### Screenshot Proof:
 ![alt text](Screenshots/Q1.png)
 
 
-Quiz 2 - 18/08/2026
+## Quiz 2 - 18/08/2026
 
-Prompt: Create a class that generates a valid IPv4 address. You may use the class RanNum()
+### Prompt: 
+Create a class that generates a valid IPv4 address. You may use the class RanNum()
 
-Code Solution:
+### Code Solution:
 ``` .java
 public class IPv4 {
     public String generate() {
@@ -38,15 +40,16 @@ public class IPv4 {
     }
 ```
 
-Screenshot Proof:
+### Screenshot Proof:
 ![alt text](Screenshots/Q2.png)
 
 
-Quiz 3 - 20/08/2026
+## Quiz 3 - 20/08/2026
 
-Prompt: Create a class that receives a input String add and it checks for valid IPv4 address.
+### Prompt: 
+Create a class that receives a input String add and it checks for valid IPv4 address.
 
-Code Solution:
+### Code Solution:
 ```.java
 public class Checker {
     Boolean test = true;
@@ -69,5 +72,5 @@ public class Checker {
         }
     }
 ```
-Screenshot Proof:  
+### Screenshot Proof:  
 ![alt text](Screenshots/Q3.png)
