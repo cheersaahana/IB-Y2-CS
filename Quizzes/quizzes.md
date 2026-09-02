@@ -123,3 +123,51 @@ public class Porter {
 
 ### Screenshot Proof:
 ![alt text](Screenshots/Q4.png)
+
+
+## Quiz 5 - 24/08/2026
+
+### Prompt:
+Create a class that uses parallel arrays to store a table of hostnames and their IP addresses.
+
+### Code Solution:
+```java
+import java.util.ArrayList;
+public class DNS {
+    ArrayList<String> hostName = new ArrayList<>();
+    ArrayList<String> IP = new ArrayList<>();
+    String host;
+    String ip;
+
+    public DNS(String host) {
+        this.host = host;
+        this.hostName.add("localhost"); this.hostName.add("google.com"); this.hostName.add("example.com");
+        IP.add("127.0.0.1"); IP.add("142.250.72.14"); IP.add("7.7.7.7");
+    }
+
+    public String lookup() {
+        for (int i = 0; i < hostName.size(); i++) {
+            if (host.equals(hostName.get(i))) {
+                ip = IP.get(i);
+                break;
+            } else {
+                ip = "-1";
+            }
+        }
+        
+        if (ip.equals("-1")) {
+            return "#hostname not on record table. Use register() to add a new hostname:IP pair";
+        } else {
+            return "#" + ip;
+        }
+    }
+
+    public void register(String host, String ip) {
+        hostName.add(host);
+        IP.add(ip);
+    }
+}
+```
+
+## Screenshot Proof:
+![alt text](Screenshots/Q5.png)
