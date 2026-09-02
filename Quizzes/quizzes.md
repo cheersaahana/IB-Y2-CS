@@ -1,3 +1,4 @@
+# Quizzes Doc ->
 # Quizzes for IB Y2
 
 ## Quiz 1 - 13/08/2026
@@ -6,7 +7,7 @@
 Create a class that generates a random number between 0 and 256, returns a string.
 
 ### Code Solution: 
-```.java
+```java
 public class RanNum {
     public String getNumber() {
         int num = (int) (Math.random() * 257);
@@ -24,7 +25,7 @@ public class RanNum {
 Create a class that generates a valid IPv4 address. You may use the class RanNum()
 
 ### Code Solution:
-``` .java
+```java
 public class IPv4 {
     public String generate() {
         String string = "#";
@@ -49,8 +50,8 @@ public class IPv4 {
 ### Prompt: 
 Create a class that receives a input String add and it checks for valid IPv4 address.
 
-### Code Solution:
-```.java
+Code Solution:
+```
 public class Checker {
     Boolean test = true;
     public Checker(String add) {
