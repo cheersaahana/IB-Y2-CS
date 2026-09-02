@@ -52,7 +52,7 @@ Create a class that receives a input String add and it checks for valid IPv4 add
 ### Code Solution:
 ```java
 public class Checker {
-    Boolean test = true;
+    private boolean test = true;
     public Checker(String add) {
         String[] pieces = add.split("\\.");
 
@@ -84,11 +84,11 @@ Create a class receives a service name, ip address and build a ip:port address.
 ### Code Solution:
 ```java
 public class Porter {
-    ArrayList<String> service = new ArrayList<>();
-    ArrayList<String> port = new ArrayList<>();
-    String serviceName;
-    String ip;
-    String portNum;
+    private ArrayList<String> service = new ArrayList<>();
+    private ArrayList<String> port = new ArrayList<>();
+    private String serviceName;
+    private String ip;
+    private String portNum;
 
     public Porter(String serviceName, String ip) {
         this.serviceName = serviceName;
@@ -134,10 +134,10 @@ Create a class that uses parallel arrays to store a table of hostnames and their
 ```java
 import java.util.ArrayList;
 public class DNS {
-    ArrayList<String> hostName = new ArrayList<>();
-    ArrayList<String> IP = new ArrayList<>();
-    String host;
-    String ip;
+    private ArrayList<String> hostName = new ArrayList<>();
+    private ArrayList<String> IP = new ArrayList<>();
+    private String host;
+    private String ip;
 
     public DNS(String host) {
         this.host = host;
@@ -169,5 +169,39 @@ public class DNS {
 }
 ```
 
-## Screenshot Proof:
+### Screenshot Proof:
 ![alt text](Screenshots/Q5.png)
+
+
+## Quiz 6 - 27/08/2026
+
+### Prompt:
+Create a class that uses parallel arrays to filter traffic in network using ip/hostnames, assume the DNS:
+
+### Code Solution:
+```java
+public class Filter {
+    private String[] hostName = {"localhost", "google.com", "example.com"};
+    private String[] ip = {"127.0.0.1", "142.250.72.14", "7.7.7.7"};
+    private String test;
+
+    public Filter (String test) {
+        this.test = test;
+    }
+
+    public String check() {
+        for (int i = 0; i < hostName.length; i++) {
+            if (test.equals(hostName[i])) {
+                return "#accepted with ip:" + ip[i] + " hostname:" + test;
+            } 
+            if (test.equals(ip[i])) {
+                return "#accepted ip:" + test + " hostname:" + hostName[i];
+            }
+        }
+        return "#rejected";
+    }
+}
+```
+
+### Screenshot Proof:
+![alt text](Screenshots/Q6.png)

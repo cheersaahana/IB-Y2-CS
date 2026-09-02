@@ -1,6 +1,6 @@
 //Quiz 21/08/26
 public class Checker {
-    Boolean test = true;
+    private boolean test = true;
     public Checker(String add) {
         String[] pieces = add.split("\\.");
 

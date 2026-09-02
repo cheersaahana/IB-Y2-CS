@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 public class Porter {
-    ArrayList<String> service = new ArrayList<>();
-    ArrayList<String> port = new ArrayList<>();
-    String serviceName;
-    String ip;
-    String portNum;
+    private ArrayList<String> service = new ArrayList<>();
+    private ArrayList<String> port = new ArrayList<>();
+    private String serviceName;
+    private String ip;
+    private String portNum;
 
     public Porter(String serviceName, String ip) {
         this.serviceName = serviceName;

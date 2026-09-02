@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 public class DNS {
-    ArrayList<String> hostName = new ArrayList<>();
-    ArrayList<String> IP = new ArrayList<>();
-    String host;
-    String ip;
+    private ArrayList<String> hostName = new ArrayList<>();
+    private ArrayList<String> IP = new ArrayList<>();
+    private String host;
+    private String ip;
 
     public DNS(String host) {
         this.host = host;
