@@ -1,4 +1,3 @@
-# Quizzes Doc ->
 # Quizzes for IB Y2
 
 ## Quiz 1 - 13/08/2026
