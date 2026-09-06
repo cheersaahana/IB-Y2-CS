@@ -230,7 +230,7 @@ public String generateMAC() {
 ```
 
 ### Screenshot Proof:
-
+![alt text](Screenshots/Q7.png)
 
 
 ## Quiz 8 - 04/09/26
