@@ -205,3 +205,65 @@ public class Filter {
 
 ### Screenshot Proof:
 ![alt text](Screenshots/Q6.png)
+
+
+## Quiz 7 - 31/08/2026
+
+### Prompt:
+Create the flow diagram for the method below:
+```java
+public String generateMAC() {
+    Random r = new Random();
+    String[] hex = {"0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"};
+    String mac = "";
+
+    for (int i = 0; i < 6; i++) {
+        int number = r.nextInt(256);
+        int first = number / 16;
+        int second = number % 16;
+        mac += hex[first] + hex[second];
+        if (i < 5) {
+            mac += ":";
+        }
+    }
+    return mac;}
+```
+
+### Screenshot Proof:
+
+
+
+## Quiz 8 - 04/09/26
+
+### Prompt:
+Create a class that uses parallel arrays to store a NAT table (Network Address Translation)
+
+### Code Solution:
+```java
+public class NAT {
+    private int deviceCount = 0;
+    private String[] localIP;
+    private int[] localPorts;
+    private int[] publicPorts;
+    private String publicIP;
+
+    public NAT (String publicIP, int deviceCount) {
+        this.publicIP = publicIP;
+        localIP = new String[deviceCount];
+        localPorts = new int[deviceCount];
+        publicPorts = new int[deviceCount];
+    }
+
+    public String get_new_trans(String ip, int port) {
+        localIP[deviceCount] = ip;
+        localPorts[deviceCount] = port;
+        publicPorts[deviceCount] = 10001 + deviceCount;
+        deviceCount++;
+
+        return publicIP + ":" + publicPorts[deviceCount - 1];
+    }
+}
+```
+
+### Screenshot Proof:
+![alt text](Screenshots/Q8.png)
