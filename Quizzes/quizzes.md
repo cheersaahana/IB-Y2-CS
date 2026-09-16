@@ -267,3 +267,57 @@ public class NAT {
 
 ### Screenshot Proof:
 ![alt text](Screenshots/Q8.png)
+
+
+## Quiz 9 - 10/09/26
+
+### Prompt:
+Create a class that receives a 2D array and returns the average across columns and across rows.
+
+### Code Solution:
+```java
+import java.util.Arrays;
+
+public class Average {
+    int[][] nums;
+    int rows;
+    int cols;
+    int[] avgRows;
+    int[] avgCols;
+
+    public Average (int[][] nums) {
+        this.nums = nums;
+        rows = nums.length;
+        cols = nums[0].length;
+
+        avgRows = new int[rows];
+        for (int i = 0; i < rows; i++) {
+            int sum = 0;
+            for (int z = 0; z < cols; z++) {
+                sum+= nums[i][z];
+            }
+            avgRows[i] = sum / rows;
+        }
+
+        avgCols = new int[cols];
+        for (int i = 0; i < rows; i++) {
+            int sum = 0;
+            for (int z = 0; z < cols; z++) {
+                sum += nums[z][i];
+            }
+            avgCols[i] = sum / cols;
+        }
+    }
+
+    public String avgCols() {
+        return Arrays.toString(avgCols);
+    }
+
+    public String avgRows() {
+        return Arrays.toString(avgRows);
+    }
+}
+```
+
+### Screenshot Proof:
+![alt text](Screenshots/Q9.png)
