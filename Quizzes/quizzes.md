@@ -317,3 +317,40 @@ public class Average {
 
 ### Screenshot Proof:
 ![alt text](Screenshots/Q9.png)
+
+
+## Quiz 10 - 14/09/26
+
+### Prompt:
+Create a class that receives a 2D array and a integer, returns the array scaled by the constant:
+
+### Code Solution:
+```java
+import java.util.Arrays;
+
+public class ScaledMatrix {
+    private int[][] matrix;
+    private int scale;
+
+    public ScaledMatrix (int[][] matrix) {
+        this.matrix = matrix;
+    }
+
+    public int[][] scale (int scale) {
+        int size = matrix[0].length;
+        for (int x = 0; x < size; x++) {
+            for (int y = 0; y < size; y++) {
+                matrix[x][y] *= 3;
+            }
+        }
+        return matrix;
+    }
+
+    public String show(int[][] matrix) {
+        return Arrays.deepToString(matrix);
+    }
+}
+```
+
+### Screenshot Proof:
+![alt text](Screenshots/Q10.png)

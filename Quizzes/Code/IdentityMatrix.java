@@ -1,11 +1,11 @@
 import java.util.Arrays;
 
-public class Matrix {
+public class IdentityMatrix {
     private int size;
     private int[][] identity;
     private String identityString;
 
-    public Matrix(int size) {
+    public IdentityMatrix(int size) {
         this.size = size;
         identity = new int[size][size];
 

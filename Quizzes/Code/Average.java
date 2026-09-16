@@ -1,10 +1,10 @@
 import java.util.Arrays;
 
 public class Average {
-    int rows;
-    int cols;
-    int[] avgRows;
-    int[] avgCols;
+    private int rows;
+    private int cols;
+    private int[] avgRows;
+    private int[] avgCols;
 
     public Average (int[][] nums) {
         rows = nums.length;
