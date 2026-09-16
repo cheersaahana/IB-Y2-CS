@@ -1,4 +1,4 @@
-# Quizzes for IB Y2
+# Quizzes for IB Y2 ![alt text](<Decorative Elements/ComputerTyping.gif>)
 
 ## Quiz 1 - 13/08/2026
 
