@@ -412,7 +412,6 @@ public class VectorizedMatrix {
     private int[] vectorized;
     private int n;
     private int m;
-    private String vectorizedString;
 
     public VectorizedMatrix (int[][] matrix) {
         this.matrix = matrix;
@@ -441,3 +440,47 @@ public class VectorizedMatrix {
 
 ### Screenshot Proof:
 ![alt text](Screenshots/Q12.png)
+
+
+## Quiz 13 - 21/09/26
+
+### Prompt:
+Create a method that receives a 1D array and builds a square matrix, use zero-padded.
+
+### Code Solution:
+``` java
+import java.util.Arrays;
+
+public class SquareMatrix {
+    private int[] array;
+    private int [][] square;
+    private int s;
+
+    public SquareMatrix(int[] array) {
+        this.array = array;
+        s = (int) Math.sqrt(array.length);
+        if (s*s != array.length) {
+            s++;
+        }
+        square = new int[s][s];
+    }
+
+    public int[][] toMatrix() {
+        for (int i = 0; i < array.length ; i++) {
+            square[i/s][i%s] = array[i];
+        }
+        return square;
+    }
+
+    public String show(int[][] matrix) {
+        String string = "";
+        for (int r = 0; r < matrix.length; r++) {
+            string += Arrays.toString(matrix[r]) + "\n";
+        }
+        return string;
+    }
+}
+```
+
+### Screenshot Proof:
+![alt text](Screenshots/Q13.png)

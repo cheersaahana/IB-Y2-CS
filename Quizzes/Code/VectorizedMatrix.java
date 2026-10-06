@@ -6,8 +6,7 @@ public class VectorizedMatrix {
     private int[] vectorized;
     private int n;
     private int m;
-    private String vectorizedString;
-
+    
     public VectorizedMatrix (int[][] matrix) {
         this.matrix = matrix;
         this.n = matrix.length;
