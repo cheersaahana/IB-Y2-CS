@@ -359,10 +359,40 @@ public class ScaledMatrix {
 ## Quiz 11 - 16/09/26
 
 ### Prompt:
-Not Posted Yet
+Create a class that receives a constant n and returns a identity matrix of size n x n
 
 ### Code Solution:
-In Progress
+```java
+import java.util.Arrays;
+
+public class IdentityMatrix {
+    private int size;
+    private int[][] identity;
+    private String identityString;
+
+    public IdentityMatrix(int size) {
+        this.size = size;
+        identity = new int[size][size];
+
+        for (int i = 0; i < size; i++) {
+            for (int s = 0; s < size; s++) {
+                identity[i][s] = 0;
+                if (i == s) {
+                    identity[i][s] = 1;
+                }
+            }
+        }
+    }
+
+    public String toString() {
+        String identityString = "";
+        for (int r = 0; r < identity.length; r++) {
+            identityString += Arrays.toString(identity[r]) + "\n";
+        }
+        return identityString;
+    }
+}
+```
 
 ### Screenshot Proof:
-In Progress
+![alt text](Screenshots/Q11.png)

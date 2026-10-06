@@ -19,14 +19,17 @@ public class IdentityMatrix {
         }
     }
 
-    public String show() {
-        identityString = Arrays.deepToString(identity);
+    public String toString() {
+        String identityString = "";
+        for (int r = 0; r < identity.length; r++) {
+            identityString += Arrays.toString(identity[r]) + "\n";
+        }
         return identityString;
     }
 
     public static void main(String[] args) {
         int size = 3;
-        Matrix test = new Matrix(size);
-        int[][] identity = test.identity;
+        IdentityMatrix test = new IdentityMatrix(size);
+        System.out.println(test);
     }
 }
