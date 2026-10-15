@@ -444,11 +444,26 @@ public int[][] toMatrix() {
 ## Quiz 14 - 13/10/26
 
 ### Prompt:
-Create a method that receives a 1D array and builds a square matrix, use zero-padded.
+Create a method that creates a ascending diagonal matrix
 
 ### Code Solution:
 ```java
-
+public int[][] diagonal(int size) {
+	int[][] diagonal = new int[size][size];
+	int k = 1;
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++) {
+			if (i == j) {
+				diagonal[i][j] = k;
+				k++;
+			} else {
+				diagonal[i][j] = 0;
+			}
+		}
+	}
+	return diagonal;
+}
 ```
 
 ### Screenshot Proof:
+![alt text](Screenshots/Q14.png)
