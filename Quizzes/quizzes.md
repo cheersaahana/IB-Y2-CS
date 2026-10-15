@@ -406,11 +406,15 @@ public int[] vectorize() {
         }
     }
     return vectorized;
+
+    public String show(int[] x) {
+        return Arrays.toString(x);
+    }
 }
 ```
 
 ### Screenshot Proof:
-![alt text](Screenshots/Q12.png?v=2.0)
+![alt text](Screenshots/Q12.png?v=3.0)
 
 
 ## Quiz 13 - 14/09/26
