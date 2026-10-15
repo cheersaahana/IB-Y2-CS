@@ -621,16 +621,42 @@ Create a method that calculates the error in representation of a ADC with a rang
 
 ### Code Solution:
 ```java
-class ADCError {
-    static double calculateADCError(double sample) {
-        double resolution = 5.0/Math.pow(2, 6);
-        int digitalValue = (int) (sample/resolution);
-        double represented = digitalValue * resolution;
+static double calculateADCError(double sample) {
+    double resolution = 5.0/Math.pow(2, 6);
+    int digitalValue = (int) (sample/resolution);
+    double represented = digitalValue * resolution;
         
-        return Math.abs(sample - represented);
-    }
+    return Math.abs(sample - represented);
 }
 ```
 
 ### Screenshot Proof:
 ![alt text](Screenshots/Q15.png)
+
+
+## Quiz 16 - 15/10/26
+
+### Prompt:
+Create a method that calculates the minimum number of bits required for an ADC to measure the smallest voltage difference specified in an array of voltage values, given the minimum and maximum input voltage range.
+
+### Code Solution:
+```java
+static int calculateResolution(double min, double max, double[] readings) {
+    double smallestDifference = Double.MAX_VALUE;
+    for (int i = 0; i < readings.length; i++) {
+        for (int j = i + 1; j < readings.length; j++) {
+            double difference = Math.abs(readings[i] - readings[j]);
+            if (difference > 0 && difference < smallestDifference) {
+                smallestDifference = difference;
+            }
+        }
+    }
+    double voltageRange = max - min;
+    int bits = (int) Math.ceil(Math.log(voltageRange / smallestDifference) / Math.log(2));
+    
+    return bits;
+    }
+```
+
+### Screenshot Proof:
+![alt text](Screenshots/Q16.png)
