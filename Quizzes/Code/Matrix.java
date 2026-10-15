@@ -97,7 +97,7 @@ public class Matrix {
 	}
 
 	public static void main(String[] args) {
-		/*//Quiz 10 - Scaled Matrix:
+		//Quiz 10 - Scaled Matrix:
 		int[][] matrix = {
 				{1, 2, 3},
 				{4, 5, 6},
@@ -130,12 +130,11 @@ public class Matrix {
 		Matrix test4 = new Matrix(numbers2);
 		int[][] into_matrix = test4.toMatrix();
 		System.out.println(test4.show(into_matrix));
-		*/
 
 		//Quiz 14 -  Diagonal Matrix:
-		int size = 4;
+		size = 4;
 		Matrix test5 = new Matrix(size);
-		int[][] into_matrix = test5.diagonal(size);
+		into_matrix = test5.diagonal(size);
 		System.out.println(test5.show(into_matrix));
 	}
 }
