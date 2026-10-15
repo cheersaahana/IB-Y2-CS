@@ -439,35 +439,6 @@ public int[][] toMatrix() {
 ### Screenshot Proof:
 ![alt text](Screenshots/Q13.png?v=1.1.2)
 
-
-## Quiz 14 - 13/10/26
-
-### Prompt:
-Create a method that creates a ascending diagonal matrix
-
-### Code Solution:
-```java
-public int[][] diagonal(int size) {
-	int[][] diagonal = new int[size][size];
-	int k = 1;
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
-			if (i == j) {
-				diagonal[i][j] = k;
-				k++;
-			} else {
-				diagonal[i][j] = 0;
-			}
-		}
-	}
-	return diagonal;
-}
-```
-
-### Screenshot Proof:
-![alt text](Screenshots/Q14.png)
-
-
 ## Quiz 10-14
 
 ### Final Matrix.java Code
@@ -613,3 +584,53 @@ public class Matrix {
 	}
 }
 ```
+
+
+## Quiz 14 - 13/10/26
+
+### Prompt:
+Create a method that creates a ascending diagonal matrix
+
+### Code Solution:
+```java
+public int[][] diagonal(int size) {
+	int[][] diagonal = new int[size][size];
+	int k = 1;
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++) {
+			if (i == j) {
+				diagonal[i][j] = k;
+				k++;
+			} else {
+				diagonal[i][j] = 0;
+			}
+		}
+	}
+	return diagonal;
+}
+```
+
+### Screenshot Proof:
+![alt text](Screenshots/Q14.png)
+
+
+## Quiz 15 - 14/10/26
+
+### Prompt:
+Create a method that calculates the error in representation of a ADC with a range 0-5v and resolution 6 bits for and voltage measured from an analog input.
+
+### Code Solution:
+```java
+class ADCError {
+    static double calculateADCError(double sample) {
+        double resolution = 5.0/Math.pow(2, 6);
+        int digitalValue = (int) (sample/resolution);
+        double represented = digitalValue * resolution;
+        
+        return Math.abs(sample - represented);
+    }
+}
+```
+
+### Screenshot Proof:
+![alt text](Screenshots/Q15.png)
