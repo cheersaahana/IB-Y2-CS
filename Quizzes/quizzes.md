@@ -384,7 +384,7 @@ public int[][] identity() {
 ```
 
 ### Screenshot Proof:
-![alt text](Screenshots/Q11.png?v=1.2)
+![alt text](Screenshots/Q11.png?v=2.0)
 
 
 ## Quiz 12 - 10/09/26
