@@ -367,39 +367,24 @@ Create a class that receives a constant n and returns a identity matrix of size 
 
 ### Code Solution:
 ```java
-import java.util.Arrays;
-
-public class IdentityMatrix {
-    private int size;
-    private int[][] identity;
-    private String identityString;
-
-    public IdentityMatrix(int size) {
-        this.size = size;
-        identity = new int[size][size];
-
+    public int[][] identity() {
+        int size = matrix.length;
+        int[][] identity = new int[size][size];
         for (int i = 0; i < size; i++) {
-            for (int s = 0; s < size; s++) {
-                identity[i][s] = 0;
-                if (i == s) {
-                    identity[i][s] = 1;
+            for (int j = 0; j < size; j++) {
+                if (i == j) {
+                    identity[i][j] = 1;
+                } else {
+                    identity[i][j] = 0;
                 }
             }
         }
+        return identity;
     }
-
-    public String toString() {
-        String identityString = "";
-        for (int r = 0; r < identity.length; r++) {
-            identityString += Arrays.toString(identity[r]) + "\n";
-        }
-        return identityString;
-    }
-}
 ```
 
 ### Screenshot Proof:
-![alt text](Screenshots/Q11.png)
+![alt text](Screenshots/Q11.png?v=1.1)
 
 
 ## Quiz 12 - 10/09/26

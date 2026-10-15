@@ -81,7 +81,7 @@ public class Matrix {
     }
 
     public static void main(String[] args) {
-        //Quiz 10 - Scaled Matrix:
+        /*//Quiz 10 - Scaled Matrix:
         int[][] matrix = {
                 {1, 2, 3},
                 {4, 5, 6},
@@ -91,6 +91,7 @@ public class Matrix {
         Matrix test = new Matrix(matrix);
         int[][] scaled_matrix = test.scale(scale);
         System.out.println(test.show(scaled_matrix));
+        */
 
         //Quiz 11 - Identity Matrix
         int size = 3;
