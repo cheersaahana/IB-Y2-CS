@@ -367,20 +367,20 @@ Create a class that receives a constant n and returns a identity matrix of size 
 
 ### Code Solution:
 ```java
-    public int[][] identity() {
-        int size = matrix.length;
-        int[][] identity = new int[size][size];
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                if (i == j) {
-                    identity[i][j] = 1;
-                } else {
-                    identity[i][j] = 0;
-                }
+public int[][] identity() {
+    int size = matrix.length;
+    int[][] identity = new int[size][size];
+    for (int i = 0; i < size; i++) {
+        for (int j = 0; j < size; j++) {
+            if (i == j) {
+                identity[i][j] = 1;
+            } else {
+                identity[i][j] = 0;
             }
         }
-        return identity;
     }
+    return identity;
+}
 ```
 
 ### Screenshot Proof:
