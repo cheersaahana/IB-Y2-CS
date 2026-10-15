@@ -326,13 +326,13 @@ Create a class that receives a 2D array and a integer, returns the array scaled 
 
 ### Code Solution:
 ```java
+
 import java.util.Arrays;
 
-public class ScaledMatrix {
+public class Matrix {
     private int[][] matrix;
-    private int scale;
 
-    public ScaledMatrix (int[][] matrix) {
+    public Matrix (int[][] matrix) {
         this.matrix = matrix;
     }
 
@@ -346,8 +346,12 @@ public class ScaledMatrix {
         return matrix;
     }
 
-    public String show(int[][] matrix) {
-        return Arrays.deepToString(matrix);
+    public String show(int[][] x) {
+        String string = "";
+        for (int r = 0; r < x.length; r++) {
+            string += Arrays.toString(x[r]) + "\n";
+        }
+        return string;
     }
 }
 ```
