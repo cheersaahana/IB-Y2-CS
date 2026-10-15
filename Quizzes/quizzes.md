@@ -424,41 +424,21 @@ Create a method that receives a 1D array and builds a square matrix, use zero-pa
 
 ### Code Solution:
 ``` java
-import java.util.Arrays;
-
-public class SquareMatrix {
-    private int[] array;
-    private int [][] square;
-    private int s;
-
-    public SquareMatrix(int[] array) {
-        this.array = array;
-        s = (int) Math.sqrt(array.length);
-        if (s*s != array.length) {
-            s++;
-        }
-        square = new int[s][s];
+public int[][] toMatrix() {
+    int s = (int) Math.sqrt(array.length);
+    if (s*s != array.length) {
+        s++;
     }
-
-    public int[][] toMatrix() {
-        for (int i = 0; i < array.length ; i++) {
-            square[i/s][i%s] = array[i];
-        }
-        return square;
+    int[][] square = new int[s][s];
+    for (int i = 0; i < array.length ; i++) {
+        square[i/s][i%s] = array[i];
     }
-
-    public String show(int[][] matrix) {
-        String string = "";
-        for (int r = 0; r < matrix.length; r++) {
-            string += Arrays.toString(matrix[r]) + "\n";
-        }
-        return string;
-    }
+    return square;
 }
 ```
 
 ### Screenshot Proof:
-![alt text](Screenshots/Q13.png)
+![alt text](Screenshots/Q13.png?v=4.0)
 
 
 ## Quiz 14 - 13/10/26

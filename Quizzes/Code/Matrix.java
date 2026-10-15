@@ -99,7 +99,7 @@ public class Matrix {
         int[][] i_matrix = test2.identity();
         System.out.println(test2.show(i_matrix));
         System.out.println();
-        */
+        
         
         //Quiz 12 - Vectorized Matrix:
         int[][] numbers = { {1, 2, 3, 3}, {4, 5, 6, 6}, {7, 8, 9, 9} };
@@ -107,6 +107,7 @@ public class Matrix {
         int[] vectorized_matrix = test3.vectorize();
         System.out.println(test3.show(vectorized_matrix));
         System.out.println();
+        */
 
         //Quiz 13 - Square Matrix:
         int[] numbers2 = {1, 2, 3, 3, 4, 5, 6, 6, 7, 8 };
