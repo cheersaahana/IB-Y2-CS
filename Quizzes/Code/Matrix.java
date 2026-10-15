@@ -91,7 +91,7 @@ public class Matrix {
         Matrix test = new Matrix(matrix);
         int[][] scaled_matrix = test.scale(scale);
         System.out.println(test.show(scaled_matrix));
-        */
+        
 
         //Quiz 11 - Identity Matrix
         int size = 3;
@@ -99,6 +99,7 @@ public class Matrix {
         int[][] i_matrix = test2.identity();
         System.out.println(test2.show(i_matrix));
         System.out.println();
+        */
         
         //Quiz 12 - Vectorized Matrix:
         int[][] numbers = { {1, 2, 3, 3}, {4, 5, 6, 6}, {7, 8, 9, 9} };

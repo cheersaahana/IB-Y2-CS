@@ -394,36 +394,18 @@ Create a method that receives a matrix of size n x m: the output is a 1D “vect
 
 ### Code Solution:
 ``` java
-import java.util.Arrays;
-
-public class VectorizedMatrix {
-    private int[][] matrix;
-    private int[] vectorized;
-    private int n;
-    private int m;
-
-    public VectorizedMatrix (int[][] matrix) {
-        this.matrix = matrix;
-        this.n = matrix.length;
-        this.m = matrix[0].length;
-        vectorized = new int[n * m];
-    }
-
-    public int[] vectorize() {
-        int k = 0;
-        for (int r = 0; r < n; r++) {
-            for (int c = 0; c < m; c++) {
-                vectorized[k] = matrix[r][c];
-                k++;
-            }
+public int[] vectorize() {
+    int n = matrix.length;
+    int m = matrix[0].length;
+    int k = 0;
+    int[] vectorized = new int[n * m];
+    for (int r = 0; r < n; r++) {
+        for (int c = 0; c < m; c++) {
+            vectorized[k] = matrix[r][c];
+            k++;
         }
-
-        return vectorized;
     }
-
-    public String show(int[] vectorized) {
-        return Arrays.toString(vectorized);
-    }
+    return vectorized;
 }
 ```
 
