@@ -233,7 +233,7 @@ public String generateMAC() {
 ![alt text](Screenshots/Q7.png)
 
 
-## Quiz 8 - 04/09/26
+## Quiz 8 - 02/09/26
 
 ### Prompt:
 Create a class that uses parallel arrays to store a NAT table (Network Address Translation)
@@ -269,7 +269,7 @@ public class NAT {
 ![alt text](Screenshots/Q8.png)
 
 
-## Quiz 9 - 10/09/26
+## Quiz 9 - 04/09/26
 
 ### Prompt:
 Create a class that receives a 2D array and returns the average across columns and across rows.
@@ -319,7 +319,7 @@ public class Average {
 ![alt text](Screenshots/Q9.png)
 
 
-## Quiz 10 - 14/09/26
+## Quiz 10 - 07/09/26
 
 ### Prompt:
 Create a class that receives a 2D array and a integer, returns the array scaled by the constant:
@@ -356,7 +356,7 @@ public class ScaledMatrix {
 ![alt text](Screenshots/Q10.png)
 
 
-## Quiz 11 - 16/09/26
+## Quiz 11 - 08/09/26
 
 ### Prompt:
 Create a class that receives a constant n and returns a identity matrix of size n x n
@@ -398,7 +398,7 @@ public class IdentityMatrix {
 ![alt text](Screenshots/Q11.png)
 
 
-## Quiz 12 - 18/09/26
+## Quiz 12 - 10/09/26
 
 ### Prompt:
 Create a method that receives a matrix of size n x m: the output is a 1D “vectorized” version of the input.
@@ -442,7 +442,7 @@ public class VectorizedMatrix {
 ![alt text](Screenshots/Q12.png)
 
 
-## Quiz 13 - 21/09/26
+## Quiz 13 - 14/09/26
 
 ### Prompt:
 Create a method that receives a 1D array and builds a square matrix, use zero-padded.
@@ -484,3 +484,16 @@ public class SquareMatrix {
 
 ### Screenshot Proof:
 ![alt text](Screenshots/Q13.png)
+
+
+## Quiz 14 - 13/10/26
+
+### Prompt:
+Create a method that receives a 1D array and builds a square matrix, use zero-padded.
+
+### Code Solution:
+```java
+
+```
+
+### Screenshot Proof:
