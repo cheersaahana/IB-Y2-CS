@@ -357,7 +357,7 @@ public class Matrix {
 ```
 
 ### Screenshot Proof:
-![alt text](Screenshots/Q10.png)
+![alt text](Screenshots/Q10.png?v=1.1)
 
 
 ## Quiz 11 - 08/09/26
