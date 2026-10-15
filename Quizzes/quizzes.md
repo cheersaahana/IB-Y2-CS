@@ -655,7 +655,7 @@ static int calculateResolution(double min, double max, double[] readings) {
     int bits = (int) Math.ceil(Math.log(voltageRange / smallestDifference) / Math.log(2));
     
     return bits;
-    }
+}
 ```
 
 ### Screenshot Proof:
