@@ -318,6 +318,7 @@ public class Average {
 ### Screenshot Proof:
 ![alt text](Screenshots/Q9.png)
 
+## NOTE: Quiz 10 to Quiz 14 are all in one class "Matrix". For full code, check Matrix.java
 
 ## Quiz 10 - 07/09/26
 
