@@ -410,7 +410,7 @@ public int[] vectorize() {
 ```
 
 ### Screenshot Proof:
-![alt text](Screenshots/Q12.png)
+![alt text](Screenshots/Q12.png?v=1.0)
 
 
 ## Quiz 13 - 14/09/26
