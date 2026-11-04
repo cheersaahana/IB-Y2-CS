@@ -17,9 +17,9 @@ class IrisData {
         int badType = 0;
         int badDomain = 0;
         int missLabeled = 0;
-        int numSet = 0;
-        int numVer = 0;
-        int numVir = 0;
+        List<String> setosa = new ArrayList<>();
+        List<String> versicolor = new ArrayList<>();
+        List<String> virginica = new ArrayList<>();
         int repeated = 0;
         Set<String> seenLines = new HashSet<>();
 
@@ -29,19 +29,25 @@ class IrisData {
         List<Double> sepalLength = new ArrayList<>();
         List<Double> sepalWidth = new ArrayList<>();
 
+        List<Double> normalizedPL = new ArrayList<>();
+        List<Double> normalizedPW = new ArrayList<>();
+        List<Double> normalizedSL = new ArrayList<>();
+        List<Double> normalizedSW = new ArrayList<>();
+
         while (file.hasNextLine()) {
             num++;
             String line = file.nextLine().strip();
             String[] split = line.split(",", -1);
 
-            //Duplication Check
-            if (!seenLines.add(line)) {
-                repeated++;
-            }
-
             //Format Check
             if (split.length != 5) {
                 badFormat++;
+                continue;
+            }
+
+            //Duplication Check
+            if (!seenLines.add(line)) {
+                repeated++;
                 continue;
             }
 
@@ -51,40 +57,40 @@ class IrisData {
                 double pw = Double.parseDouble(split[1].strip());
                 double sl = Double.parseDouble(split[2].strip());
                 double sw = Double.parseDouble(split[3].strip());
-
                 if (pl <= 0 || pw <= 0 || sl <= 0 || sw <= 0) {
                     badDomain++;
                     continue;
                 }
-
                 String label = split[4].strip();
                 if (label.equalsIgnoreCase("Iris-setosa")) {
-                    numSet++;
+                    setosa.add(line);
                 } else if (label.equalsIgnoreCase("Iris-versicolor")) {
-                    numVer++;
+                    versicolor.add(line);
                 } else if (label.equalsIgnoreCase("Iris-virginica")) {
-                    numVir++;
+                    virginica.add(line);
                 } else {
                     missLabeled++;
                     continue;
                 }
-
-                petalLength.add(pl);
-                petalWidth.add(pw);
-                sepalLength.add(sl);
-                sepalWidth.add(sw);
             } catch (NumberFormatException oops) {
                 badType++;
                 continue;
             }
+            double pl = Double.parseDouble(split[0].strip());
+            double pw = Double.parseDouble(split[1].strip());
+            double sl = Double.parseDouble(split[2].strip());
+            double sw = Double.parseDouble(split[3].strip());
+            petalLength.add(pl);
+            petalWidth.add(pw);
+            sepalLength.add(sl);
+            sepalWidth.add(sw);
         }
-
 
         //Preprocessing Results
         System.out.println("Number of lines: " + num);
-        System.out.println("Setosa: " + numSet);
-        System.out.println("Versicolor: " + numVer);
-        System.out.println("Virginica: " + numVir);
+        System.out.println("Setosa: " + setosa.size());
+        System.out.println("Versicolor: " + versicolor.size());
+        System.out.println("Virginica: " + virginica.size());
         System.out.println("badFormat: " + badFormat);
         System.out.println("badType: " + badType);
         System.out.println("badDomain: " + badDomain);
@@ -97,21 +103,78 @@ class IrisData {
         calculateStats(petalWidth, "Petal Width");
         calculateStats(sepalLength, "Sepal Length");
         calculateStats(sepalWidth, "Sepal Width");
+
+        //normalization
+        for (int i = 0; i < petalLength.size(); i++) {
+            double z = (petalLength.get(i) - getMean(petalLength)) / getStDev(petalLength);
+            normalizedPL.add(z);
+        }
+        for (int i = 0; i < petalWidth.size(); i++) {
+            double z = (petalWidth.get(i) - getMean(petalWidth)) / getStDev(petalWidth);
+            normalizedPW.add(z);
+        }
+        for (int i = 0; i < sepalLength.size(); i++) {
+            double z = (sepalLength.get(i) - getMean(sepalLength)) / getStDev(sepalLength);
+            normalizedSL.add(z);
+        }
+        for (int i = 0; i < sepalWidth.size(); i++) {
+            double z = (sepalWidth.get(i) - getMean(sepalWidth)) / getStDev(sepalWidth);
+            normalizedSW.add(z);
+        }
+
+        System.out.println("Normalized Petal Lengths: " + normalizedPL + "\n");
+        System.out.println("Normalized Petal Widths: " + normalizedPW + "\n");
+        System.out.println("Normalized Sepal Lengths: " + normalizedSL + "\n");
+        System.out.println("Normalized Sepal Widths: " + normalizedSW);
     }
 
-    public static double medianOf(List<Double> list, int start, int end) {
-        int l = end - start;
-        int mid = (start + end) / 2;
-
-        if (l <= 0) {
+    public static double getStDev (List<Double> values) {
+        if (values.isEmpty()) {
+            System.out.println("No data found");
             return Double.NaN;
         }
 
-        if (l % 2 == 0) {
-            return (list.get(mid - 1) + list.get(mid)) / 2.0;
+        List<Double> sorted = values;
+        Collections.sort(sorted);
+        int n = values.size();
+
+        double sum = 0;
+        for (int i = 0; i < n; i++) {
+            double value = sorted.get(i);
+            sum += value;
         }
 
-        return list.get(mid);
+        double mean = sum/n;
+        
+        double variance = 0;
+        double stdev = 0;
+        for (int i = 0; i < n; i++) {
+            double value = sorted.get(i);
+            variance += Math.pow(value - mean, 2);
+        }
+        variance /= n;
+        stdev = Math.sqrt(variance);
+
+        return stdev;
+    }
+
+    public static double getMean (List<Double> values) {
+        if (values.isEmpty()) {
+            System.out.println("No data found");
+            return Double.NaN;
+        }
+
+        List<Double> sorted = values;
+        Collections.sort(sorted);
+        int n = values.size();
+
+        double sum = 0;
+        for (int i = 0; i < n; i++) {
+            double value = sorted.get(i);
+            sum += value;
+        }
+
+        return sum/n;
     }
 
     public static void calculateStats(List<Double> values, String name) {
@@ -134,11 +197,13 @@ class IrisData {
         double mean = sum/n;
 
         double variance = 0;
+        double stdev = 0;
         for (int i = 0; i < n; i++) {
             double value = sorted.get(i);
             variance += Math.pow(value - mean, 2);
         }
         variance /= n;
+        stdev = Math.sqrt(variance);
 
         double median = medianOf(sorted, 0, n);
 
@@ -160,6 +225,7 @@ class IrisData {
 
         System.out.println("Calculations for " + name);
         System.out.println("Mean: " + mean);
+        System.out.println("Standard Deviation (σ): " + stdev);
         System.out.println("Variance (σ²): " + variance);
         System.out.println("Median: " + median);
         System.out.println("Q1: " + q1);
@@ -169,5 +235,20 @@ class IrisData {
         System.out.println("Max: " + max);
         System.out.println("Outliers: " + outliers);
         System.out.println();
+    }
+
+    public static double medianOf(List<Double> list, int start, int end) {
+        int l = end - start;
+        int mid = (start + end) / 2;
+
+        if (l <= 0) {
+            return Double.NaN;
+        }
+
+        if (l % 2 == 0) {
+            return (list.get(mid - 1) + list.get(mid)) / 2.0;
+        }
+
+        return list.get(mid);
     }
 }
