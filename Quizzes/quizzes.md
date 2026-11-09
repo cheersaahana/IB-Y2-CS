@@ -660,3 +660,74 @@ static int calculateResolution(double min, double max, double[] readings) {
 
 ### Screenshot Proof:
 ![alt text](Screenshots/Q16.png)
+
+
+## Quiz 17 - 21/10/26
+
+### Prompt:
+Define the term encapsulation in the context of computer networks: 							[2]
+
+### Answer:
+Encapsulation is the concept of having all related attributes/behaviours in a single unit. For example, an assignment class would hold all the vairables and methods relaed to assignments (title, subject, etc) as one singular class. In networks, this could look like data packets containing all relevant data for transfering information in a singular packet (eg. IP address, MAC address, sequences number, etc).
+
+
+## Quiz 18 - 23/10/26
+
+### Prompt:
+State the fundamental technologies required for a VPN service									[2]
+
+### Answer:
+VPNS require some encryption technology. It is used to mask the network activity of the user by encrypting their traffic such as ISPs cannot see exactly what they're doing and what websites they access. VPNs also require tunneling. This is to alter the IP of the user to a different geographical location to circumvent regional blocks.
+
+
+## Quiz 19 - 27/10/26
+
+### Prompt:
+Identify one protocol used in the Application layer of the TCP/IP model.						[2]
+
+### Answer:
+One protocol used is Hypertext Transfer Protocol Secure (HTTPS). This is the secure protocol for websites.
+
+
+## Quiz 20 - 29/10/26
+
+### Prompt:
+Outline one step needed during preprocessing of a numerical database	 [2]
+
+### Answer:
+Data inspection. This is when the data is observed to figure out how it is organized, what it contains, types of data (String, double, boolean, etc), and more. This is needed in order to understand exactly what is being processed, its domains, etc.
+
+
+## Quiz 21 - 30/10/26
+
+### Prompt: 
+A marketing firm uses ML to analyze customer survey data.  Describe one common issue in survey data that would require data  preprocessing.         [4]
+
+### Answer:
+One common issue faced in survey data is recieving data in the wrong type. For example, when rating a marketing strategy from 1-10, survey-takers may respond in various ways such as: "10", "ten", "10.0", and etc. This leads to type errors due to the user manually inputing values and would require preprocessing to normalize all the various types of responses into one, single type. This requires lots of time and resources to go through all the data and process it.
+
+
+## Quiz 22 - 02/11/26
+
+### Prompt: 
+A school is developing a ML model to predict students' performance based on data from previous academic years. Explain how data preprocessing can improve the outcomes of the ML model.         [6]
+
+### Answer:
+Data preprocessing will allow the school to normalize/standardize the dtaa prior to any calculations in order to prevent any errors. For example, a student may input a grade in many different ways, eg. "5", "five", "5.0", "pass" which leads to an type error. OR a student may input an impossible grade eg. "-5%" or "110%" which can lead to the ML model being inaccurate or provide impossible predictions. Data preprocessing will allow the school to identify these errors through data validation, data type validation, data cleaning, and etc to address these errors and keep the model accurate.
+
+
+## Quiz 23 - 04/11/26
+
+### Prompt:
+
+
+### Answer:
+
+
+## Quiz 24 - 09/11/26
+
+### Prompt:
+
+
+### Answer:
+k-fold cross validation is used to address and avoid overfitting This is done by selecting how many iterations of splitting the database into training and testing sections we want, called folds, and then process the data multiple times while changing the folds to find the result from a variety of divisions in the database rather than just one lucky division.

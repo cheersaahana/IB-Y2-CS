@@ -188,23 +188,6 @@ class IrisData {
 
         int n = sorted.size();
 
-        double sum = 0;
-        for (int i = 0; i < n; i++) {
-            double value = sorted.get(i);
-            sum += value;
-        }
-
-        double mean = sum/n;
-
-        double variance = 0;
-        double stdev = 0;
-        for (int i = 0; i < n; i++) {
-            double value = sorted.get(i);
-            variance += Math.pow(value - mean, 2);
-        }
-        variance /= n;
-        stdev = Math.sqrt(variance);
-
         double median = medianOf(sorted, 0, n);
 
         int mid = n / 2;
@@ -224,9 +207,9 @@ class IrisData {
         }
 
         System.out.println("Calculations for " + name);
-        System.out.println("Mean: " + mean);
-        System.out.println("Standard Deviation (σ): " + stdev);
-        System.out.println("Variance (σ²): " + variance);
+        System.out.println("Mean: " + getMean(values));
+        System.out.println("Standard Deviation (σ): " + getStDev(values));
+        System.out.println("Variance (σ²): " + Math.pow(getStDev(values), 2));
         System.out.println("Median: " + median);
         System.out.println("Q1: " + q1);
         System.out.println("Q3: " + q3);
