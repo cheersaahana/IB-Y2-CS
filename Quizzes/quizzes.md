@@ -719,7 +719,7 @@ Data preprocessing will allow the school to normalize/standardize the dtaa prior
 ## Quiz 23 - 04/11/26
 
 ### Prompt:
-
+A university is preparing an ML model for admission purposes using a dataset containing 50 different metrics from applicants. Explain how dimensionality reduction techniques could be used in this context. [6]
 
 ### Answer:
 
@@ -727,7 +727,7 @@ Data preprocessing will allow the school to normalize/standardize the dtaa prior
 ## Quiz 24 - 09/11/26
 
 ### Prompt:
-
+Explain why k-fold cross validation is used with the k-nn technique. [3]
 
 ### Answer:
 k-fold cross validation is used to address and avoid overfitting This is done by selecting how many iterations of splitting the database into training and testing sections we want, called folds, and then process the data multiple times while changing the folds to find the result from a variety of divisions in the database rather than just one lucky division.
