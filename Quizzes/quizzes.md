@@ -722,7 +722,7 @@ Data preprocessing will allow the school to normalize/standardize the dtaa prior
 A university is preparing an ML model for admission purposes using a dataset containing 50 different metrics from applicants. Explain how dimensionality reduction techniques could be used in this context. [6]
 
 ### Answer:
-
+Dimensionality techniques can help the university reduce costs in storing all the data and metrics as well as reduce processing time. Using filtering, the university can select the most important metrics before it goes to the Machine Learning (ML) process. Filtering is easy to implement, but runs the risk of choosing metrics not suited for the ML model. In the case that the university needs metrics that are model-specific, wrapping can be used to select well-suited metrics. However, it is more complex to implement and runs the risk of overfitting. By using either technique successfully, the university will reduce cost and processing time since they are now using only the most relevant metrics/dimensions.
 
 ## Quiz 24 - 09/11/26
 
